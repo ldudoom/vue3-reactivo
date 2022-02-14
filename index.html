@@ -9,14 +9,23 @@
 <body>
     <div id="app">
         <span></span>
+        <br>
+        <input type="text" name="txt" id="txt">
     </div>
 
+    
     <script type="text/javascript">
         const data = {
             message: "Hola Mundo !!!"
         };
         const span = document.querySelector("span");
         span.innerText = data.message;
+        const inputTxt = document.getElementById('txt');
+        inputTxt.value = data.message;
+        inputTxt.addEventListener("input", () => {
+            data.message = inputTxt.value;
+            span.innerText = data.message;
+        });
     </script>
 </body>
 </html>
