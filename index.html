@@ -8,24 +8,22 @@
 </head>
 <body>
     <div id="app">
-        <span></span>
+        <span v-text="message"></span>
         <br>
-        <input type="text" name="txt" id="txt">
+        <input type="text" v-model="message">
     </div>
 
-    
+    <script src="https://unpkg.com/vue@3"></script>
     <script type="text/javascript">
-        const data = {
-            message: "Hola Mundo !!!"
-        };
-        const span = document.querySelector("span");
-        span.innerText = data.message;
-        const inputTxt = document.getElementById('txt');
-        inputTxt.value = data.message;
-        inputTxt.addEventListener("input", () => {
-            data.message = inputTxt.value;
-            span.innerText = data.message;
+        const { createApp } = Vue;
+        const app = createApp({
+            data () {
+                return {
+                    message: "Hola Vue como estas!"
+                }
+            }
         });
+        app.mount("#app");
     </script>
 </body>
 </html>

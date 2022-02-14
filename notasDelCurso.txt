@@ -1,0 +1,55 @@
+REACTIVIDAD
+
+    Lo primero que debemos saber es que la reactividad es un paradigma, una forma caracteristica 
+    de actuar ante cierta situcación. Que un sistema sea reactivo implica una mayor flexibilidad, 
+    un bajo acoplamiento, lo que facilita el desarrollo y escalabilidad, pues son sistemas susceptibles 
+    a los cambios.
+
+    Existen una serie de caracteristicas que deben tener los sistemas reactivos, veamos cuales son
+
+        - Responsive: Poseen una capacidad de respuesta, donde los problemas pueden detectarse rapido y ser 
+        tratados de forma eficiente para que asi el sistema puede responder de forma eficiente, esto permite 
+        darle a los usuarios una mayor confianza y asi incentivar el uso del sistema.
+
+        - Resiliente: Todo sistema reactivo debe funcionar incluso cuando existan errores, debe mantenerse receptivo. 
+        Al estar los sistemas compuestos por componentes, las fallas se presentan de forma independiente dentro de 
+        cada uno de ellos, lo que permite que ciertas partes puedan fallar y recuperarse sin comprometer el 
+        funcionamiento total del sistema.
+
+        - Escalable: El sistema debe estar en capacidad de crecer sin problemas, es receptivo a carga de trabajo que 
+        cambian en cualquier momento. Debe tener la capacidad de replicar o fragmentar componentes y distribuir 
+        las entradas entre todos ellos. Estos sistemas generalente admiten algoritmos de escalado.
+
+        - Arquitectura basada en mensajes: Los sistemas reactivos se caracterizan por tener una comunicación a traves 
+        del paso de mensajes asincronicos, donde existe una transparencia en la ubicación del destinatario. Esto 
+        permite tener un mejor flujo de mensajes, donde se supervisa la cola de mensajes que existe en el sistema. 
+        Estas comunicaciones son impulsadas por eventos.
+
+PROXY
+    
+    Imagínate a un proxy como un INTERMEDIARIO, en el ámbito de redes, tú puedes conectarte desde tu computadora 
+    a un servidor intermedio, y ese servidor intermedio puede conectarse a cualquier sitio web al que quieras entrar. 
+    De este modo, quien se conecta al sitio web es ese servidor intermedio y este mismo es quien te manda a ti la 
+    información de dicho sitio web, de esa manera tienes una conexión un poco más segura, y en este caso ese servidor 
+    intermedio es un proxy.
+
+    Ahora, teniendo en mente que un proxy es un intermediario, en JavaScript, es simplemente un intermediario que 
+    hay cuando alguien modifica un objeto, arra, función, etc.
+    
+    Por ejemplo, supongamos que tenemos un objeto:
+
+        const myObject = {
+            myProperty: "Value"
+        }
+
+    Si un programador normal quiere acceder a ese objeto, podría hacerlo de la siguiente forma:
+
+        myObject.myProperty // value
+
+    Sin embargo, con los proxys como intermediarios, podemos interceptar ese acceso y podemos cambiar el valor 
+    que dicha propiedad retorne, y podemos hacer muchas cosas más interesantes usando el propio objeto Proxy:
+
+        const myProxy = new Proxy(target, handler);
+
+    Donde target es el objeto que queremos interceptar y handler es la lógica de lo que hará nuestra intercepción.
+
