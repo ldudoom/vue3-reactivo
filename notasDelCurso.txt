@@ -53,3 +53,14 @@ PROXY
 
     Donde target es el objeto que queremos interceptar y handler es la lógica de lo que hará nuestra intercepción.
 
+
+Los puntos importantes de la reactividad son:
+
+1.Effect: Es todo aquello que efectúa un cambio en la aplicación.
+
+2.Track: Siguen las dependencias dinámicas y sus efectos. Es decir, se mantiene es el acto de dar seguimiento a 
+         aquellas variables que producen el efecto, para que si una cambia, el efecto se vuelva a calcular.
+         
+3.Trigger: Son los disparadores de los efectos de las dependencias. Es esa acción que se ejecuta después de que 
+            el track detectó un cambio para poder actualizar el effect.
+

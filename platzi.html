@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue3 Platzi</title>
-    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-store">
     
 </head>
 <body>
@@ -13,6 +13,9 @@
 
         <span p-text="message"></span>
         <input type="text" p-model="message">
+        <input type="text" p-model="message">
+
+        <img p-bind:src="image" p-bind:id="imageId">
         
     </div>
 
@@ -23,7 +26,9 @@
         const app = createApp({
             data() {
                 return {
-                    message: "Hola Vue !!!"
+                    message: "Hola Vue !!!",
+                    image: "https://via.placeholder.com/200/771796",
+                    imageId: "myId"
                 }
             },
         });
