@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3 Platzi</title>
+    <meta http-equiv="Cache-control" content="no-cache">
+    
+</head>
+<body>
+
+    <div id="app">
+
+        <span p-text="message"></span>
+        <input type="text" p-model="message">
+        
+    </div>
+
+    <script src="./platzi.js"></script>
+    <script>
+        const { createApp } = Platzi;
+
+        const app = createApp({
+            data() {
+                return {
+                    message: "Hola Vue !!!"
+                }
+            },
+        });
+        app.mount("#app");
+
+    </script>
+    
+</body>
+</html>
